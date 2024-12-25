@@ -22,3 +22,5 @@ spec:
           env:
             - name: ENVIRONMENT
               value: "production"
+      imagePullSecrets:
+        - name: dockerhub-credentials
