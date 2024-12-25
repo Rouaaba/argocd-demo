@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: my-app-container
-          image: rouaabenayed/shooting-stars:latest
+          image: rouaabenayed/starry-night:latest
           ports:
             - containerPort: 80
           env:
