@@ -25,3 +25,4 @@ spec:
               value: "production"
       imagePullSecrets:
         - name: dockerhub-credentials
+          namespace: default
