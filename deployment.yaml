@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-app
-  namespace: starry-night
+  namespace: starry-night  # Ensure this matches the namespace where your app is running
   labels:
     app: my-app
 spec:
@@ -31,7 +31,5 @@ spec:
         - name: dockerhub-credentials-volume
           secret:
             secretName: dockerhub-credentials
-            # Reference the 'default' namespace here
-            namespace: default
       imagePullSecrets:
         - name: dockerhub-credentials
