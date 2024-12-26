@@ -24,4 +24,4 @@ spec:
             - name: ENVIRONMENT
               value: "production"
       imagePullSecrets:
-        - name: dockerhub-credentials  # This refers to the secret created by SealedSecrets
+        - name: dockerhub-credentials
