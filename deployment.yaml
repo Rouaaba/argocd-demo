@@ -2,9 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-app
-  namespace: starry-night  # Ensure this matches the namespace where your app is running
-  labels:
-    app: my-app
+  namespace: starry-night
 spec:
   replicas: 1
   selector:
@@ -20,16 +18,5 @@ spec:
           image: rouaabenayed/shooting-stars:latest
           ports:
             - containerPort: 80
-          env:
-            - name: ENVIRONMENT
-              value: "production"
-          volumeMounts:
-            - name: dockerhub-credentials-volume
-              mountPath: /etc/docker-credentials
-              readOnly: true
-      volumes:
-        - name: dockerhub-credentials-volume
-          secret:
-            secretName: dockerhub-credentials
       imagePullSecrets:
         - name: dockerhub-credentials
