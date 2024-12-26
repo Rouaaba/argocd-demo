@@ -23,5 +23,13 @@ spec:
           env:
             - name: ENVIRONMENT
               value: "production"
+          volumeMounts:
+            - name: dockerhub-credentials-volume
+              mountPath: /etc/docker-credentials
+              readOnly: true
+      volumes:
+        - name: dockerhub-credentials-volume
+          secret:
+            secretName: dockerhub-credentials
       imagePullSecrets:
         - name: dockerhub-credentials
