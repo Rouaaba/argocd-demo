@@ -30,6 +30,8 @@ spec:
       volumes:
         - name: dockerhub-credentials-volume
           secret:
-            secretName: dockerhub-credentials # Use the Secret here for mounting
+            secretName: dockerhub-credentials
+            # Reference the 'default' namespace here
+            namespace: default
       imagePullSecrets:
-        - name: dockerhub-credentials # Use the Secret here for image pulling
+        - name: dockerhub-credentials
