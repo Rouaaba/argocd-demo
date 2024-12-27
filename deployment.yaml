@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: my-app-container
-          image: rouaabenayed/shooting-stars:latest
+          image: rouaabenayed/shooting-stars-private:latest
           ports:
             - containerPort: 80
       imagePullSecrets:
